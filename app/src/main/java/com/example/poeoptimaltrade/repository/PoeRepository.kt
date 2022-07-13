@@ -13,7 +13,7 @@ private const val STANDARD = "Standard"
 class PoeRepository(private val database: PoeTradeDatabase) {
     val category: List<String> = listOf("Currency", "Fragment")
     val restCategory: List<String> = listOf("DivinationCard", "Scarab", "Vial", "Fossil",
-    "DeliriumOrb", "Oil", "Incubator", "Artifact", "Resonator", "Beast")
+    "DeliriumOrb", "Oil", "Incubator", "Artifact", "Resonator")
 
     suspend fun refreshPoeDataTrade() {
         withContext(Dispatchers.IO) {
