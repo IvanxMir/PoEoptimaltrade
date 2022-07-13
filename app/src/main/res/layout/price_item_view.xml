@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="currency"
+            type="com.example.poeoptimaltrade.database.entity.Currency" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:id="@+id/price_img"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/price_name"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="TextView"
+            app:layout_constraintBaseline_toBaselineOf="@+id/price_league"
+            app:layout_constraintEnd_toStartOf="@+id/price_league"
+            app:layout_constraintStart_toEndOf="@+id/price_img" />
+
+        <TextView
+            android:id="@+id/price_league"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            app:layout_constraintBaseline_toBaselineOf="@+id/price_standard"
+            app:layout_constraintEnd_toStartOf="@+id/price_standard"
+            app:layout_constraintStart_toEndOf="@+id/price_name" />
+
+        <TextView
+            android:id="@+id/price_standard"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            app:layout_constraintBaseline_toBaselineOf="@+id/price_difference"
+            app:layout_constraintEnd_toStartOf="@+id/price_difference"
+            app:layout_constraintStart_toEndOf="@+id/price_league" />
+
+        <TextView
+            android:id="@+id/price_difference"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/price_standard"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

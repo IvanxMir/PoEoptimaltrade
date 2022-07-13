@@ -1,0 +1,530 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 5,
+    "identityHash": "89cbf2b5483cc216bf84ca495f1339f6",
+    "entities": [
+      {
+        "tableName": "categories_table",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`categoryId` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `category_name` TEXT, `category_img_url` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "categoryId",
+            "columnName": "categoryId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "category_name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "url",
+            "columnName": "category_img_url",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "categoryId"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "currency_table",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`currencyId` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `currency_name` TEXT, `currency_league_price` REAL, `currency_standard_price` REAL, `currency_img_url` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "currencyId",
+            "columnName": "currencyId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "currency_name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "leaguePrice",
+            "columnName": "currency_league_price",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "standardPrice",
+            "columnName": "currency_standard_price",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "img_url",
+            "columnName": "currency_img_url",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "currencyId"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "fragment_table",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `fragment_name` TEXT, `fragment_league_price` REAL, `fragment_standard_price` REAL, `fragment_img_url` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "fragment_name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "leaguePrice",
+            "columnName": "fragment_league_price",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "standardPrice",
+            "columnName": "fragment_standard_price",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "img_url",
+            "columnName": "fragment_img_url",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "divinationCard_table",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `divinationCard_name` TEXT, `divinationCard_league_price` REAL, `divinationCard_standard_price` REAL, `divinationCard_img_url` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "divinationCard_name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "leaguePrice",
+            "columnName": "divinationCard_league_price",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "standardPrice",
+            "columnName": "divinationCard_standard_price",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "img_url",
+            "columnName": "divinationCard_img_url",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "scarab_table",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `scarab_name` TEXT, `scarab_league_price` REAL, `scarab_standard_price` REAL, `scarab_img_url` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "scarab_name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "leaguePrice",
+            "columnName": "scarab_league_price",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "standardPrice",
+            "columnName": "scarab_standard_price",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "img_url",
+            "columnName": "scarab_img_url",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "vial_table",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `vial_name` TEXT, `vial_league_price` REAL, `vial_standard_price` REAL, `vial_img_url` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "vial_name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "leaguePrice",
+            "columnName": "vial_league_price",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "standardPrice",
+            "columnName": "vial_standard_price",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "img_url",
+            "columnName": "vial_img_url",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "fossil_table",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `fossil_name` TEXT, `fossil_league_price` REAL, `fossil_standard_price` REAL, `fossil_img_url` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "fossil_name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "leaguePrice",
+            "columnName": "fossil_league_price",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "standardPrice",
+            "columnName": "fossil_standard_price",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "img_url",
+            "columnName": "fossil_img_url",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "deliriumOrb_table",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `deliriumOrb_name` TEXT, `deliriumOrb_league_price` REAL, `deliriumOrb_standard_price` REAL, `deliriumOrb_img_url` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "deliriumOrb_name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "leaguePrice",
+            "columnName": "deliriumOrb_league_price",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "standardPrice",
+            "columnName": "deliriumOrb_standard_price",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "img_url",
+            "columnName": "deliriumOrb_img_url",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "oil_table",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `oil_name` TEXT, `oil_league_price` REAL, `oil_standard_price` REAL, `oil_img_url` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "oil_name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "leaguePrice",
+            "columnName": "oil_league_price",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "standardPrice",
+            "columnName": "oil_standard_price",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "img_url",
+            "columnName": "oil_img_url",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "sentinel_table",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `sentinel_name` TEXT, `sentinel_league_price` REAL, `sentinel_standard_price` REAL, `sentinel_img_url` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "sentinel_name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "leaguePrice",
+            "columnName": "sentinel_league_price",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "standardPrice",
+            "columnName": "sentinel_standard_price",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "img_url",
+            "columnName": "sentinel_img_url",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "artifact_table",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `artifact_name` TEXT, `artifact_league_price` REAL, `artifact_standard_price` REAL, `artifact_img_url` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "artifact_name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "leaguePrice",
+            "columnName": "artifact_league_price",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "standardPrice",
+            "columnName": "artifact_standard_price",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "img_url",
+            "columnName": "artifact_img_url",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "resonator_table",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `resonator_name` TEXT, `resonator_league_price` REAL, `resonator_standard_price` REAL, `resonator_img_url` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "resonator_name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "leaguePrice",
+            "columnName": "resonator_league_price",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "standardPrice",
+            "columnName": "resonator_standard_price",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "img_url",
+            "columnName": "resonator_img_url",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '89cbf2b5483cc216bf84ca495f1339f6')"
+    ]
+  }
+}
